@@ -1,0 +1,159 @@
+.wrapper {
+  text-align: center;
+  border: 1px solid black;
+  width: 350px;
+}
+/* Clocks */
+.digital {
+  font-size: 1.5rem;
+  border: 1px solid #333;
+  width: 125px;
+  margin: 30px auto 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.15),
+              2px 2px 2.5px rgba(0,0,0,.25),
+              3px 3px 5px rgba(0,0,0,.35);
+}
+.analog {
+  margin: 20px auto;
+  width: 125px;
+  height: 125px;
+  border: 1.5px solid #333;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.15),
+              2px 2px 2.5px rgba(0,0,0,.25),
+              3px 3px 5px rgba(0,0,0,.35),
+              inset 1.5px 1.5px 2px rgba(0,0,0,.15);
+}
+.analog::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: red;
+  left: 60.5px;
+  top: 60.5px;
+}
+
+/* Clock Hands */
+.second-hand {  
+  content: ' ';
+  background-color: red;
+  position: absolute;
+  display: block;
+  width: 0.5px;
+  height: 60px;
+  left: 63.25px;
+  top: 5px;
+  transform-origin: 0px 58px;
+  transform: rotate(0deg);
+  transition: all 1s ease;
+}
+.minute-hand {
+  content: ' ';
+  background-color: black;
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 45px;
+  left: 62.5px;
+  top: 17.75px;
+  transform-origin: .5px 45px;
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+.hour-hand {
+  content: ' ';
+  background-color: black;
+  position: absolute;
+  display: block;
+  width: 1.5px;
+  height: 30px;
+  left: 62.5px;
+  top: 32.5px;
+  transform-origin: .75px 30px;
+  transform: rotate(0deg);
+}
+/* CSS only Analog Clock Numbers */
+#twelve::before,
+#twelve::after,
+#three::before,
+#three::after,
+#six::before,
+#six::after,
+#nine::before,
+#nine::after {
+  content: ' ';
+  background-color: black;
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 10px;
+}
+
+#twelve {
+  position: absolute;
+  left: 54.5px;
+  top: 2px;
+}
+#twelve::before {
+  top: 12px;
+  left: 33px;
+  transform: rotate(30deg);
+}
+#twelve::after {
+  top: 30.5px;
+  left: 51.5px;
+  transform: rotate(60deg);
+}
+
+#three {
+  position: absolute;
+  right: 6px;
+  top: 52px;
+}
+#three::before {
+  top: 31px;
+  right: 12px;
+  transform: rotate(1200deg);
+}
+#three::after {
+  top: 49.5px;
+  right: 30.5px;
+  transform: rotate(150deg);
+}
+
+#six {
+  position: absolute;
+  left: 58.5px;
+  bottom: 2px;
+}
+#six::before {
+  bottom: 11.5px;
+  right: 28.25px;
+  transform: rotate(210deg)
+}
+#six::after {
+  bottom: 30px;
+  right: 46.5px;
+  transform: rotate(240deg)
+}
+#nine {
+  position: absolute;
+  left: 8px;
+  top: 52px;
+}
+#nine::before {
+  bottom: 28.25px;
+  left: 11px;
+  transform: rotate(300deg);
+}
+#nine::after {
+  bottom: 46.5px;
+  left: 29.25px;
+  transform: rotate(330deg);
+}
