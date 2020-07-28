@@ -5,7 +5,6 @@ const hourHand = document.querySelector('.hour-hand');
 
 setInterval(() => {
   setTime()
-
 },1000)
 
 function setTime() {  
@@ -20,11 +19,6 @@ function setTime() {
   const minDeg = minute * 6;
   const hrDeg = hours * 30;
   const secDeg = second * 6;
-
-  secDeg === 354 ?
-  secondHand.style.transition = 'none' :
-  secondHand.style.transition = '' 
-  console.log(secDeg);
 
   // Changes CSS styling for rotating clock hands
   secondHand.style.transform = 'rotate('+secDeg+'deg)';
